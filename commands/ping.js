@@ -1,9 +1,9 @@
 const { MessageEmbed } = require("discord.js");
-const config = require("../config.json");
+const config = require("./config/config.json");
 
 module.exports = {
     name: "ping",
-    execute(client, message) {
+    run(client, message) {
         let latency = Date.now() - message.createdTimestamp;
         let api = Math.round(client.ws.ping);
 

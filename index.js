@@ -1,6 +1,7 @@
 const Discord = require("discord.js");
 const fs = require("fs");
-const { prefix, ownername, token, name } = require("./config.json");
+require("dotenv").config();
+const { prefix, ownername, name } = require("./config/config.json");
 
 const client = new Discord.Client();
 client.commands = new Discord.Collection();
@@ -85,11 +86,11 @@ client.on("message", (message) => {
     setTimeout(() => timestamps.delete(message.author.id), cooldownAmount);
 
     try {
-        command.execute(client, message, args);
+        command.run(client, message, args);
     } catch (error) {
         console.error(error);
         message.reply("There was an error trying to execute that command!");
     }
 });
 
-client.login(token);
+client.login(process.env.TOKEN);
