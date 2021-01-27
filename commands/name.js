@@ -21,7 +21,7 @@ module.exports = {
                         );
                     }
                 });
-                let embed = new Discord.MessageEmbed()
+                const embed = new Discord.MessageEmbed()
                     .setTitle("Server Name Changed")
                     .setColor(Math.floor(Math.random() * 16777215))
                     .setDescription(
