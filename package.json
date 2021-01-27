@@ -18,7 +18,7 @@
   "homepage": "https://github.com/Unieo/dandy-dot#readme",
   "dependencies": {
     "discord.js": "^12.5.1",
-    "dotenv": "^8.2.0",
+    "discord.js-pagination": "^1.0.3",
     "express": "^4.17.1",
     "fs": "0.0.1-security"
   }
