@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 const fs = require("fs");
-require("dotenv").config();
+const keepAlive = require("./server.js");
 const { prefix, ownername, name } = require("./config/config.json");
 
 const client = new Discord.Client();
@@ -93,4 +93,5 @@ client.on("message", (message) => {
     }
 });
 
+keepAlive();
 client.login(process.env.TOKEN);

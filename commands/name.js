@@ -4,8 +4,7 @@ const config = require("../config/config.json");
 module.exports = {
     name: "name",
     description: "Sets the guild name.",
-    guildOnly: true,
-    cooldown: 5,
+    cooldown: 2,
     run(client, message, args) {
         if (message.channel instanceof Discord.DMChannel) return;
         if (message.member.permissions.has("ADMINISTRATOR")) {
