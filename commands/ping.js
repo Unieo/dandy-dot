@@ -11,7 +11,7 @@ module.exports = {
 
         let embed = new Discord.MessageEmbed()
             .setTitle(":ping_pong: Pong!")
-            .setColor(Math.floor(Math.random() * 16777215))
+            .setColor("RANDOM")
             .addField("Latency", latency)
             .addField("API Latency", api)
             .setTimestamp()

@@ -19,7 +19,7 @@ module.exports = {
                 .then(() => {
                     const embed = new Discord.MessageEmbed()
                         .setTitle("Member Banned from Server")
-                        .setColor(Math.floor(Math.random() * 16777215))
+                        .setColor("RANDOM")
                         .setDescription(
                             `**<@${user.id}> was banned by <@${message.author.id}>.**`
                         )
@@ -31,7 +31,7 @@ module.exports = {
                     console.error(err);
                 });
         } else {
-            message.channel.send("**Error:** Member not found!");
+            message.channel.send(`**Error:** Member not found! Try using: \`${config.prefix}ban @usermention\``);
         }
     },
 };
